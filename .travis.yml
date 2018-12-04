@@ -14,7 +14,7 @@ android:
 
 before_script:
   # Create and start emulator
-  - ls /data/ -al
+  - ls -al /
   - cd /data/;du --max-depth=1 -hl
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   - emulator -avd test -no-skin -no-audio -no-window &
