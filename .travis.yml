@@ -14,8 +14,9 @@ android:
 
 before_script:
   # Create and start emulator
-  - ls -al /
-  - cd /data/;du --max-depth=1 -hl
+  - ls -al /usr/local/android-sdk
+  - cd /usr/local/android-sdk;du --max-depth=1 -hl
+  - cd /usr/local/android-sdk/tools;du --max-depth=1 -hl
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
