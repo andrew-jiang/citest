@@ -14,6 +14,7 @@ android:
 
 before_script:
   # Create and start emulator
+  - pwd
   - ls -al /usr/local/android-sdk
   - cd /usr/local/android-sdk;du --max-depth=1 -hl
   - cd /usr/local/android-sdk/tools;du --max-depth=1 -hl
